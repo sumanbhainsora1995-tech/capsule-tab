@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="./style.css">
+
+  </head>
+    
+  <body>
+  <div id="ptc"></div>
+<canvas id="cc"></canvas>
+<div class="fl" id="fl"></div>
+
+<div class="sc on" id="s0">
+  <div class="box-wrap" onclick="openBox()">
+    <div class="box-glow"></div>
+    <svg width="200" height="180" viewBox="0 0 200 180" style="filter:drop-shadow(0 20px 40px rgba(180,120,40,0.5))">
+      <rect x="20" y="80" width="160" height="100" rx="4" fill="#3d2008" stroke="#c89840" stroke-width="2"/>
+      <rect x="92" y="80" width="16" height="100" fill="rgba(210,140,40,0.4)"/>
+      <rect x="15" y="55" width="170" height="35" rx="4" fill="#4a2810" stroke="#c89840" stroke-width="2"/>
+      <rect x="92" y="55" width="16" height="35" fill="rgba(210,140,40,0.4)"/>
+      <ellipse cx="80" cy="58" rx="20" ry="12" fill="#c89840" opacity="0.8" transform="rotate(-15 80 58)"/>
+      <ellipse cx="120" cy="58" rx="20" ry="12" fill="#c89840" opacity="0.8" transform="rotate(15 120 58)"/>
+      <circle cx="100" cy="58" r="8" fill="#e8b840"/>
+    </svg>
+  </div>
+  <p class="big-text">This box was sealed with love.</p>
+  <p class="small-text">Open it when you need to remember how loved you are, Diki.</p>
+  <p class="blink">tap the box to open</p>
+</div>
+
+<div class="sc" id="s1">
+  <div class="lcard">
+    <div style="font-size:38px">&#128274;</div>
+    <div class="ltitle">This is locked, Diki</div>
+    <div class="lsub">Enter the secret code to unlock your memories</div>
+    <div class="lcdbox" id="lcd">&#8226;&#8226;&#8226;&#8226;</div>
+    <div class="np">
+      <button class="nk" onclick="nk(1)">1</button>
+      <button class="nk" onclick="nk(2)">2</button>
+      <button class="nk" onclick="nk(3)">3</button>
+      <button class="nk" onclick="nk(4)">4</button>
+      <button class="nk" onclick="nk(5)">5</button>
+      <button class="nk" onclick="nk(6)">6</button>
+      <button class="nk" onclick="nk(7)">7</button>
+      <button class="nk" onclick="nk(8)">8</button>
+      <button class="nk" onclick="nk(9)">9</button>
+      <button class="nk" onclick="nc()">&#9003;</button>
+      <button class="nk" onclick="nk(0)">0</button>
+      <button class="nk" style="font-size:12px" onclick="showHint()">hint</button>
+    </div>
+    <p style="font-size:11px;color:rgba(210,160,80,0.4);margin-top:10px;font-style:italic">Month + year we started</p>
+  </div>
+</div>
+
+<div class="sc" id="s2">
+  <div class="tlwrap">
+    <div class="tltit">Our Journey</div>
+
+    <div class="tli show" id="tl0" onclick="toggleTl(0)">
+      <div><div class="tldot">🌱</div></div>
+      <div style="flex:1">
+        <div class="tlyear">2021 - It Began</div>
+        <div class="tlmem">We came into relation. You came, you saw, you stayed. Lucky you!</div>
+      </div>
+    </div>
+
+    <div class="tli show" id="tl1" onclick="toggleTl(1)">
+      <div><div class="tldot">🏔️</div></div>
+      <div style="flex:1">
+        <div class="tlyear">2022 - Ooty</div>
+        <div class="tlmem">Our first trip. Cold weather, hot chai, and you being dramatic about the hills!</div>
+      </div>
+    </div>
+
+    <div class="tli show" id="tl2" onclick="toggleTl(2)">
+      <div><div class="tldot">🌊</div></div>
+      <div style="flex:1">
+        <div class="tlyear">2023 - Kodaikanal</div>
+        <div class="tlmem">You said no more hills in Ooty. Yet here we were. Again. In hills.</div>
+      </div>
+    </div>
+
+    <div class="tli show" id="tl3" onclick="toggleTl(3)">
+      <div><div class="tldot">💍</div></div>
+      <div style="flex:1">
+        <div class="tlyear">2024 - My Vasooli</div>
+        <div class="tlmem">You officially became mine. My Vasooli. My person. My forever headache!</div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:20px">
+      <button class="gnk" onclick="goTo(3)">Meet the babies</button>
+    </div>
+  </div>
+</div>
+
+<div class="sc" id="s3">
+  <p class="big-text" style="margin-bottom:6px">The Babies</p>
+  <p class="small-text" style="margin-bottom:18px">Our chaotic little family</p>
+  <div class="pgrid">
+    <div class="pc" onclick="this.classList.toggle('open')">
+      <div style="font-size:28px">🐶</div>
+      <div class="pn">Nuggy Piggy</div>
+      <div class="pm">The OG baby. Dramatic. Loud. Exactly like you!</div>
+    </div>
+    <div class="pc" onclick="this.classList.toggle('open')">
+      <div style="font-size:28px">🐩</div>
+      <div class="pn">Black Black</div>
+      <div class="pm">Mysterious. Named with zero creativity.</div>
+    </div>
+    <div class="pc" onclick="this.classList.toggle('open')">
+      <div style="font-size:28px">🐻</div>
+      <div class="pn">Oogy</div>
+      <div class="pm">Chaos gremlin. Always in trouble. Our spirit animal!</div>
+    </div>
+    <div class="pc" onclick="this.classList.toggle('open')">
+      <div style="font-size:28px">🐕</div>
+      <div class="pn">Tin Tin</div>
+      <div class="pm">Tiny but thinks he owns the house. Absolute king!</div>
+    </div>
+    <div class="pc" style="flex:0 0 100%" onclick="this.classList.toggle('open')">
+      <div style="font-size:28px">🐾</div>
+      <div class="pn">Buddy Giddy</div>
+      <div class="pm">Baby of all babies. Too cute for this world!</div>
+    </div>
+  </div>
+  <button class="gnk" onclick="goTo(4)">One last thing...</button>
+</div>
+
+<div class="sc" id="s4">
+  <div class="lwrap">
+    <div class="ltit2">Dear Diki,</div>
+    <div class="lbody" id="lt"><span class="cur">|</span></div>
+    <button class="cbtn" id="cbtn" onclick="celebrate()">Celebrate!</button>
+  </div>
+</div>
+    <script  src="./script.js"></script>
+
+  </body>
+  
+</html>
